@@ -1,0 +1,100 @@
+/* Neural Neon Blue — v2 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cinzel", serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-primary: #050B14;
+  /* Deep Navy Blue */
+  --color-secondary: #FFC107;
+  /* Radiant Neon Gold */
+  --color-accent: #0A1526;
+  /* Lighter Navy blue */
+  --color-paper: #020610;
+  /* Very Dark Background */
+  --color-gray: #64748B;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+
+  body {
+    @apply text-white antialiased;
+    background-color: #020610;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply tracking-tight;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-accent/80 backdrop-blur-md border border-secondary/20;
+  }
+
+  .tech-grid {
+    background-image: radial-gradient(circle at 2px 2px, rgba(255, 193, 7, 0.05) 1px, transparent 0);
+    background-size: 40px 40px;
+  }
+
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+  }
+
+  .btn-primary {
+    @apply bg-secondary text-primary px-10 py-5 rounded-full font-bold transition-all hover:bg-secondary/90 hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_20px_rgba(255,193,7,0.4)] cursor-pointer text-sm uppercase tracking-widest;
+  }
+
+  .btn-outline {
+    @apply border-2 border-secondary/50 text-secondary px-10 py-5 rounded-full font-bold transition-all hover:bg-secondary hover:text-primary hover:shadow-[0_0_25px_rgba(255,193,7,0.6)] hover:scale-[1.02] active:scale-[0.98] cursor-pointer text-sm uppercase tracking-widest;
+  }
+
+  .neon-text {
+    text-shadow: 0 0 12px rgba(255, 193, 7, 0.6), 0 0 25px rgba(255, 193, 7, 0.4);
+  }
+
+  .neon-border {
+    box-shadow: 0 0 20px rgba(255, 193, 7, 0.4);
+    border: 1px solid rgba(255, 193, 7, 0.7);
+  }
+}
+
+.mask-oval {
+  clip-path: ellipse(45% 50% at 50% 50%);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Neural atmosphere removed in favor of NeuronBackground canvas component */
+
+/* Custom scrollbar for modal content */
+.custom-scrollbar::-webkit-scrollbar { width: 5px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,193,7,0.3); border-radius: 10px; }
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(255,193,7,0.6); }
