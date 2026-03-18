@@ -740,7 +740,7 @@ const HistoryButton = () => {
               initial={{ scale: 0.9, opacity: 0, y: 20 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 20 }}
-              className="bg-[#030712] border border-blue-500/20 rounded-2xl shadow-[0_0_100px_rgba(0,0,0,0.9)] max-w-4xl w-full max-h-[80vh] overflow-hidden flex flex-col lg:flex-row relative"
+              className="bg-[#030712] border border-blue-500/20 rounded-2xl shadow-[0_0_100px_rgba(0,0,0,0.9)] max-w-3xl w-[95%] sm:w-full max-h-[85vh] md:max-h-[80vh] overflow-hidden flex flex-col lg:flex-row relative mx-auto"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
@@ -752,7 +752,7 @@ const HistoryButton = () => {
               </button>
  
               {/* Left Side: Carousel */}
-              <div className="lg:w-[45%] relative h-[250px] sm:h-[350px] lg:h-auto bg-black">
+              <div className="lg:w-[45%] relative h-[220px] sm:h-[300px] lg:h-auto bg-black shrink-0">
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={currentImage}
@@ -761,7 +761,7 @@ const HistoryButton = () => {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.4 }}
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-contain md:object-cover object-center bg-black"
                   />
                 </AnimatePresence>
                 
@@ -782,14 +782,14 @@ const HistoryButton = () => {
               </div>
  
               {/* Right Side: Text */}
-              <div className="lg:w-[55%] p-6 md:p-10 lg:p-12 overflow-y-auto custom-scrollbar bg-gradient-to-br from-[#030712] to-[#010B1D]">
+              <div className="lg:w-[55%] p-5 sm:p-8 md:p-10 overflow-y-auto custom-scrollbar bg-gradient-to-br from-[#030712] to-[#010B1D]">
                 <div className="w-full">
                   <span className="text-blue-500 font-bold text-[8px] uppercase tracking-[0.4em] mb-4 block drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]">Minha Jornada</span>
-                  <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-6 leading-tight uppercase tracking-tighter">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-display font-bold text-white mb-6 leading-tight uppercase tracking-tighter">
                     CONHEÇA <span className="italic font-normal text-secondary font-serif">MINHA HISTÓRIA.</span>
                   </h3>
                   
-                  <div className="space-y-4 text-white/70 text-sm md:text-base font-light leading-relaxed">
+                  <div className="space-y-4 text-white/70 text-[13px] sm:text-sm md:text-base font-light leading-relaxed">
                     {storyParagraphs.map((p, i) => (
                       <p key={i}>{p}</p>
                     ))}
