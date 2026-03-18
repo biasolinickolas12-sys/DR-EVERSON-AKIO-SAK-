@@ -159,8 +159,8 @@ const Navbar = () => {
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden border-[2px] border-cyan-400/80 shadow-[0_0_20px_rgba(34,211,238,0.5)] group-hover:shadow-[0_0_35px_rgba(34,211,238,0.8)] group-hover:border-cyan-300 flex items-center justify-center bg-[#020610] transition-all duration-500 p-[6px]">
                 <img src="/logo2.png" alt="Logo" className="w-full h-full object-contain drop-shadow-[0_0_5px_rgba(34,211,238,0.8)]" />
               </div>
-              <div className="flex flex-col relative">
-                <span className="text-xl font-display font-bold text-white tracking-widest uppercase">Dr. Everson Akio</span>
+              <div className="flex flex-col relative text-left">
+                <span className="text-lg sm:text-xl font-display font-bold text-white tracking-widest uppercase">Dr. Everson Akio</span>
                 <span className="text-[9px] font-bold text-secondary uppercase tracking-[0.3em] neon-text">Neurocirurgião</span>
                 <div className="absolute -bottom-2 left-0 h-[2px] w-0 bg-gradient-to-r from-secondary to-secondary/50 group-hover:w-full transition-all duration-700 ease-out shadow-[0_0_10px_rgba(255,215,0,0.5)]" />
               </div>
@@ -224,16 +224,16 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="max-w-3xl"
         >
-          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-secondary/10 neon-border mb-8">
-            <div className="w-2 h-2 rounded-full bg-secondary animate-pulse shadow-[0_0_10px_rgba(255,215,0,0.8)]" />
-            <span className="text-[9px] font-bold uppercase tracking-[0.3em] text-secondary">
+          <div className="inline-flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2 rounded-full bg-secondary/10 neon-border mb-8 max-w-full">
+            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-secondary animate-pulse shadow-[0_0_10px_rgba(255,215,0,0.8)] shrink-0" />
+            <span className="text-[8px] sm:text-[9px] font-bold uppercase tracking-widest sm:tracking-[0.3em] text-secondary truncate sm:whitespace-normal">
               Neurocirurgia: “state of the art”
             </span>
           </div>
 
           <div className="group inline-block mb-12 cursor-default relative">
             <motion.h1 
-              className="text-6xl md:text-8xl xl:text-9xl font-display font-bold leading-[0.85] pb-4 text-white/90 tracking-tighter uppercase"
+              className="text-5xl sm:text-6xl md:text-8xl xl:text-9xl font-display font-bold leading-[0.85] pb-4 text-white/90 tracking-tighter uppercase"
             >
               CIÊNCIA, <br />
               <span className="text-secondary italic font-normal font-serif neon-text">PRECISÃO</span> <br />
@@ -361,7 +361,7 @@ const Philosophy = () => {
             <span className="text-[11px] font-bold uppercase tracking-[0.6em] text-secondary mb-12 block neon-text">O Especialista</span>
             <div className="group inline-block mb-16 cursor-default relative">
               <motion.h2 
-                className="text-5xl md:text-8xl font-display font-bold leading-[0.9] pb-4 tracking-tighter uppercase text-white"
+                className="text-4xl sm:text-5xl md:text-8xl font-display font-bold leading-[0.9] pb-4 tracking-tighter uppercase text-white"
               >
                 MAIS QUE UM MÉDICO, <br />
                 <span className="italic font-normal text-secondary font-serif neon-text drop-shadow-[0_0_10px_rgba(255,215,0,0.2)]">UM PARCEIRO NA SUA</span> <br />
@@ -478,7 +478,7 @@ const Expertise = () => {
             <span className="text-[11px] font-bold uppercase tracking-[0.6em] text-secondary mb-8 block neon-text">Nossa Expertise</span>
             <div className="group inline-block cursor-default relative">
               <motion.h2 
-                className="text-5xl md:text-8xl font-display font-bold text-white leading-[0.9] tracking-tighter uppercase pb-4"
+                className="text-4xl sm:text-5xl md:text-8xl font-display font-bold text-white leading-[0.9] tracking-tighter uppercase pb-4"
               >
                 TECNOLOGIA A SERVIÇO <br />
                 <span className="italic font-normal text-secondary font-serif neon-text drop-shadow-[0_0_15px_rgba(255,215,0,0.3)]">DA VIDA HUMANA.</span>
@@ -648,10 +648,10 @@ const HumanConnection = () => {
             transition={{ duration: 1 }}
             className="order-1 lg:order-2"
           >
-            <span className="text-[11px] font-bold uppercase tracking-[0.6em] text-secondary mb-8 block neon-text">Empatia e Acolhimento</span>
+            <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-widest md:tracking-[0.6em] text-secondary mb-8 block neon-text">Empatia e Acolhimento</span>
             <div className="group inline-block mb-12 cursor-default relative">
               <motion.h2 
-                className="text-4xl md:text-7xl font-display font-bold text-white tracking-tighter uppercase leading-[0.9] pb-4"
+                className="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-white tracking-tighter uppercase leading-[0.9] pb-4"
               >
                 MAIS QUE <br />
                 <span className="italic font-normal text-secondary font-serif neon-text">MEDICINA,</span> <br />
@@ -851,7 +851,7 @@ const FAQ = () => {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, type: "spring", stiffness: 200 }}
-              className="text-5xl md:text-8xl font-display font-bold text-white tracking-tighter uppercase drop-shadow-lg pb-4"
+              className="text-4xl sm:text-5xl md:text-8xl font-display font-bold text-white tracking-tighter uppercase drop-shadow-lg pb-4"
             >
               PERGUNTAS <span className="italic font-normal text-secondary font-serif neon-text">FREQUENTES.</span>
             </motion.h2>
@@ -941,7 +941,7 @@ const Locations = () => {
       <div className="max-w-[1800px] mx-auto px-6 md:px-12 relative z-10">
         <div className="text-center mb-24">
           <span className="text-[11px] font-bold uppercase tracking-[0.6em] text-secondary mb-8 block neon-text">Onde Atendemos</span>
-          <h2 className="text-5xl md:text-8xl font-display font-bold text-white tracking-tighter uppercase">
+          <h2 className="text-4xl sm:text-5xl md:text-8xl font-display font-bold text-white tracking-tighter uppercase">
             NOSSAS <span className="italic font-normal text-secondary font-serif neon-text">UNIDADES.</span>
           </h2>
         </div>
