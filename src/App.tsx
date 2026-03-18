@@ -361,7 +361,7 @@ const Philosophy = () => {
             <span className="text-[11px] font-bold uppercase tracking-[0.6em] text-secondary mb-12 block neon-text">O Especialista</span>
             <div className="group inline-block mb-16 cursor-default relative">
               <motion.h2 
-                className="text-4xl sm:text-5xl md:text-8xl font-display font-bold leading-[0.9] pb-4 tracking-tighter uppercase text-white"
+                className="text-3xl sm:text-5xl md:text-8xl font-display font-bold leading-[0.9] pb-4 tracking-tighter uppercase text-white"
               >
                 MAIS QUE UM MÉDICO, <br />
                 <span className="italic font-normal text-secondary font-serif neon-text drop-shadow-[0_0_10px_rgba(255,215,0,0.2)]">UM PARCEIRO NA SUA</span> <br />
@@ -375,7 +375,7 @@ const Philosophy = () => {
                 Formado pelas Faculdades de Medicinia de Marília, Residência no Hospital das Clínicas da USP/SP e Conjunto Hospitalar de Sorocaba. O Dr. Everson Akio dedica sua carreira ao aperfeiçoamento constante das técnicas de microcirurgia neural.
               </p>
               <div className="pl-8 border-l-2 border-secondary/40">
-                <p className="text-white italic text-2xl md:text-3xl leading-snug">
+                <p className="text-white italic text-xl md:text-3xl leading-snug">
                   "O cuidado com o ser humano é uma relação que me cativa, fazer o bem fazendo o que mais amo, aplicar o conhecimento médico em prol dos meus semelhantes, ajudar quem precisa, receber tantos gestos de gratidão tornam essa profissão especial e aumenta ainda mais minha motivação buscar ser cada vez melhor para os meus pacientes."
                 </p>
               </div>
@@ -503,7 +503,7 @@ const Expertise = () => {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
               onClick={() => setSelectedExpertise(item)}
-              className={`group relative overflow-hidden rounded-[40px] bg-[#050B14] aspect-square lg:aspect-auto lg:h-[650px] border border-secondary/10 hover:border-secondary/40 transition-all duration-700 shadow-2xl cursor-pointer`}
+              className={`group relative overflow-hidden rounded-[24px] sm:rounded-[40px] bg-[#050B14] aspect-[4/5] sm:aspect-square lg:aspect-auto lg:h-[650px] border border-secondary/10 hover:border-secondary/40 transition-all duration-700 shadow-2xl cursor-pointer`}
             >
               <img
                 src={item.img}
@@ -513,18 +513,18 @@ const Expertise = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#020610]/90 via-[#020610]/40 to-transparent" />
 
-              <div className="absolute inset-0 p-10 flex flex-col justify-end">
-                <div className="w-14 h-14 bg-secondary/20 border border-secondary/30 rounded-2xl flex items-center justify-center text-secondary mb-10 group-hover:scale-110 transition-transform duration-500 group-hover:bg-secondary group-hover:text-primary group-hover:shadow-[0_0_20px_rgba(255,215,0,0.6)]">
+              <div className="absolute inset-0 p-6 sm:p-10 flex flex-col justify-end">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-secondary/20 border border-secondary/30 rounded-2xl flex items-center justify-center text-secondary mb-6 sm:mb-10 group-hover:scale-110 transition-transform duration-500 group-hover:bg-secondary group-hover:text-primary group-hover:shadow-[0_0_20px_rgba(255,215,0,0.6)]">
                   {item.icon}
                 </div>
-                <h3 className="text-4xl font-display font-bold text-white mb-6 group-hover:text-secondary transition-colors duration-300 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">{item.title}</h3>
-                <p className="text-white text-lg font-light leading-relaxed max-w-xs mb-10 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-6 group-hover:translate-y-0 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+                <h3 className="text-2xl sm:text-3xl xl:text-4xl font-display font-bold text-white mb-4 sm:mb-6 group-hover:text-secondary transition-colors duration-300 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">{item.title}</h3>
+                <p className="text-white text-sm sm:text-lg font-light leading-relaxed max-w-xs mb-6 sm:mb-10 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-6 group-hover:translate-y-0 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] line-clamp-3 lg:line-clamp-none">
                   {item.desc}
                 </p>
-                <div className="inline-flex items-center gap-4 text-xs font-bold uppercase tracking-[0.3em] text-secondary group-hover:text-white transition-colors cursor-pointer">
+                <div className="inline-flex items-center gap-2 sm:gap-4 text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] sm:tracking-[0.3em] text-secondary group-hover:text-white transition-colors cursor-pointer">
                   <span>Explorar</span>
-                  <div className="w-10 h-10 rounded-full border border-secondary/30 flex items-center justify-center group-hover:bg-secondary group-hover:border-secondary group-hover:text-primary group-hover:shadow-[0_0_15px_rgba(255,215,0,0.5)] transition-all">
-                    <ChevronRight size={18} />
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-secondary/30 flex items-center justify-center group-hover:bg-secondary group-hover:border-secondary group-hover:text-primary group-hover:shadow-[0_0_15px_rgba(255,215,0,0.5)] transition-all">
+                    <ChevronRight size={16} />
                   </div>
                 </div>
               </div>
@@ -651,7 +651,7 @@ const HumanConnection = () => {
             <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-widest md:tracking-[0.6em] text-secondary mb-8 block neon-text">Empatia e Acolhimento</span>
             <div className="group inline-block mb-12 cursor-default relative">
               <motion.h2 
-                className="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-white tracking-tighter uppercase leading-[0.9] pb-4"
+                className="text-3xl sm:text-5xl md:text-7xl font-display font-bold text-white tracking-tighter uppercase leading-[0.9] pb-4"
               >
                 MAIS QUE <br />
                 <span className="italic font-normal text-secondary font-serif neon-text">MEDICINA,</span> <br />
@@ -862,7 +862,7 @@ const FAQ = () => {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, type: "spring", stiffness: 200 }}
-              className="text-4xl sm:text-5xl md:text-8xl font-display font-bold text-white tracking-tighter uppercase drop-shadow-lg pb-4"
+              className="text-3xl sm:text-5xl md:text-8xl font-display font-bold text-white tracking-tighter uppercase drop-shadow-lg pb-4"
             >
               PERGUNTAS <span className="italic font-normal text-secondary font-serif neon-text">FREQUENTES.</span>
             </motion.h2>
@@ -881,16 +881,16 @@ const FAQ = () => {
             >
               <button
                 onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
-                className="w-full p-10 flex justify-between items-center text-left transition-colors"
+                className="w-full p-6 sm:p-10 flex justify-between items-center text-left transition-colors"
               >
-                <span className={`text-xl md:text-2xl font-bold tracking-tight transition-colors duration-300 ${openIdx === idx ? 'text-white' : 'text-white/80'}`}>
+                <span className={`text-lg sm:text-xl md:text-2xl font-bold tracking-tight transition-colors duration-300 ${openIdx === idx ? 'text-white' : 'text-white/80'}`}>
                   {item.q}
                 </span>
-                <div className={`w-12 h-12 rounded-full border flex items-center justify-center transition-all duration-500 scale-90 md:scale-100 ${openIdx === idx
+                <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full border flex items-center justify-center transition-all duration-500 scale-90 md:scale-100 ${openIdx === idx
                   ? 'border-secondary text-secondary rotate-180 shadow-[0_0_20px_rgba(255,215,0,0.4)] bg-secondary/10'
                   : 'border-secondary/20 text-secondary'
                   }`}>
-                  <ChevronDown size={22} />
+                  <ChevronDown size={20} />
                 </div>
               </button>
               <AnimatePresence>
@@ -901,8 +901,8 @@ const FAQ = () => {
                     exit={{ height: 0, opacity: 0 }}
                     className="overflow-hidden"
                   >
-                    <div className="p-10 pt-2 text-xl font-light leading-relaxed text-white/70">
-                      <div className="w-full h-[1px] bg-secondary/10 mb-8" />
+                    <div className="p-6 sm:p-10 pt-2 text-sm sm:text-lg md:text-xl font-light leading-relaxed text-white/70">
+                      <div className="w-full h-[1px] bg-secondary/10 mb-6 sm:mb-8" />
                       <p>{item.a}</p>
                     </div>
                   </motion.div>
@@ -952,7 +952,7 @@ const Locations = () => {
       <div className="max-w-[1800px] mx-auto px-6 md:px-12 relative z-10">
         <div className="text-center mb-24">
           <span className="text-[11px] font-bold uppercase tracking-[0.6em] text-secondary mb-8 block neon-text">Onde Atendemos</span>
-          <h2 className="text-4xl sm:text-5xl md:text-8xl font-display font-bold text-white tracking-tighter uppercase">
+          <h2 className="text-3xl sm:text-5xl md:text-8xl font-display font-bold text-white tracking-tighter uppercase">
             NOSSAS <span className="italic font-normal text-secondary font-serif neon-text">UNIDADES.</span>
           </h2>
         </div>
@@ -965,19 +965,19 @@ const Locations = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="bg-white/5 backdrop-blur-md border border-white/10 rounded-[40px] p-10 flex flex-col items-start relative group hover:border-secondary/30 transition-all duration-500 shadow-2xl"
+              className="bg-white/5 backdrop-blur-md border border-white/10 rounded-[24px] sm:rounded-[40px] p-6 sm:p-10 flex flex-col items-start relative group hover:border-secondary/30 transition-all duration-500 shadow-2xl"
             >
               <div className="bg-[#4DB0A5] px-6 py-2 rounded-lg mb-10">
                 <h3 className="text-xl md:text-2xl font-display font-bold text-white">{unit.name}</h3>
               </div>
 
-              <div className="space-y-8 w-full">
-                <div className="flex gap-6 items-start">
-                  <div className="w-12 h-12 rounded-xl border border-white/20 flex items-center justify-center shrink-0">
-                    <MapPin className="text-white w-6 h-6" />
+              <div className="space-y-6 sm:space-y-8 w-full">
+                <div className="flex gap-4 sm:gap-6 items-start">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl border border-white/20 flex items-center justify-center shrink-0">
+                    <MapPin className="text-white w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <div>
-                    <p className="text-white/80 text-lg font-light leading-relaxed">
+                    <p className="text-white/80 text-sm sm:text-lg font-light leading-relaxed">
                       <span className="font-bold">Endereço:</span> {unit.address}
                     </p>
                   </div>
@@ -1057,7 +1057,7 @@ const Footer = () => {
               <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-[2px] border-cyan-400/80 shadow-[0_0_25px_rgba(34,211,238,0.5)] group-hover:shadow-[0_0_45px_rgba(34,211,238,0.9)] group-hover:border-cyan-300 flex items-center justify-center bg-[#020610] transition-all duration-500 group-hover:scale-110 p-[10px]">
                 <img src="/logo2.png" alt="Logo" className="w-full h-full object-contain drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]" />
               </div>
-              <span className="font-display font-bold text-4xl md:text-5xl tracking-[0.1em] uppercase text-white drop-shadow-md">Dr. Everson Akio</span>
+              <span className="font-display font-bold text-2xl sm:text-4xl md:text-5xl tracking-[0.1em] uppercase text-white drop-shadow-md">Dr. Everson Akio</span>
             </div>
             <p className="text-white/50 max-w-md text-xl md:text-2xl font-light leading-relaxed mb-12">
               Excelência em <span className="text-secondary/80 font-medium">Neurocirurgia Complexa</span> e tratamentos de alta precisão para restauração da qualidade de vida.
