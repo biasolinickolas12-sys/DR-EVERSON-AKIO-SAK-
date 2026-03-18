@@ -704,6 +704,17 @@ const HistoryButton = () => {
   const nextImage = () => setCurrentImage((prev) => (prev + 1) % images.length);
   const prevImage = () => setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
   const storyParagraphs = [
     "Olá queridos visitantes e pacientes, sejam bem-vindos ao meu site! Meu nome é Everson Akio Sakô, sou neurocirurgião e nesse pequeno trecho vou contar um pouco sobre minha carreira profissional.",
     "Aos 10 anos de idade, minha avó ficou doente, teve uma doença chamada dissecção aorta torácica, precisou operar, ficou bastante tempo internada, lembro dela voltando pra casa num almoço de domingo e mesmo criança vi o quanto a medicina pôde fazer por ela, achei tudo aquilo incrível e como ela estava bem.",
