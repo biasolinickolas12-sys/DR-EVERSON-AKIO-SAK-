@@ -580,16 +580,15 @@ const Expertise = () => {
                   <p className="text-base md:text-lg text-white/70 font-light leading-relaxed whitespace-pre-line">
                     {selectedExpertise.fullDetails}
                   </p>
-                </div>
 
-                {/* Footer - Compact */}
-                <div className="p-4 border-t border-white/5 bg-accent/40 shrink-0">
-                  <button
+                  <motion.button
                     onClick={() => setSelectedExpertise(null)}
-                    className="w-full py-3 bg-secondary text-primary hover:bg-secondary/80 rounded-lg font-bold uppercase tracking-[0.2em] text-[9px] transition-all duration-300 shadow-[0_0_15px_rgba(255,215,0,0.3)]"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="w-full mt-10 py-5 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-xl font-bold uppercase tracking-[0.2em] text-[11px] transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.4)] hover:shadow-[0_0_35px_rgba(6,182,212,0.7)] border border-cyan-300/20 cursor-pointer"
                   >
-                    Fechar Detalhes
-                  </button>
+                    Retornar ao Site e Continuar Navegando
+                  </motion.button>
                 </div>
               </motion.div>
             </motion.div>
