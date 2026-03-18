@@ -806,10 +806,21 @@ const HistoryButton = () => {
                     ))}
                   </div>
  
-                  <div className="mt-12 pt-10 border-t border-white/5 flex items-center gap-6">
-                    <div className="w-16 h-[1px] bg-secondary/30" />
-                    <span className="text-secondary text-[9px] font-bold uppercase tracking-[0.3em] neon-text">Dr. Everson Akio</span>
+                  <div className="mt-12 pt-10 border-t border-white/5 flex items-center justify-between gap-6">
+                    <div className="flex items-center gap-6">
+                      <div className="w-16 h-[1px] bg-secondary/30" />
+                      <span className="text-secondary text-[9px] font-bold uppercase tracking-[0.3em] neon-text">Dr. Everson Akio</span>
+                    </div>
                   </div>
+
+                  <motion.button
+                    onClick={() => setIsOpen(false)}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="w-full mt-10 py-5 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-xl font-bold uppercase tracking-[0.2em] text-[11px] transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.4)] hover:shadow-[0_0_35px_rgba(6,182,212,0.7)] border border-cyan-300/20 cursor-pointer"
+                  >
+                    Retornar ao Site e Continuar Navegando
+                  </motion.button>
                 </div>
               </div>
             </motion.div>
