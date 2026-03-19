@@ -155,8 +155,6 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled ? "bg-primary/95 backdrop-blur-xl border-b border-secondary/10 py-4" : "bg-transparent py-8"}`}>
       <div className="max-w-[1800px] mx-auto px-6 md:px-12 flex items-center">
-            {/* DEBUG MARKER - REMOVE AFTER VERIFICATION */}
-            <div className="fixed top-0 left-0 bg-red-600 text-white text-[8px] px-2 z-[9999]">SITE MODIFICADO - TESTE DE VISIBILIDADE</div>
             <a href="#inicio" className="flex items-center gap-4 relative z-50 group transition-all duration-300 hover:scale-105">
               <div className="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden border-[2px] border-cyan-400/80 shadow-[0_0_20px_rgba(34,211,238,0.5)] group-hover:shadow-[0_0_35px_rgba(34,211,238,0.8)] group-hover:border-cyan-300 flex items-center justify-center bg-[#020610] transition-all duration-500 p-[6px]">
                 <img src="/logo2.png" alt="Logo" className="w-full h-full object-contain drop-shadow-[0_0_5px_rgba(34,211,238,0.8)]" />
@@ -1006,20 +1004,6 @@ const Locations = () => {
               transition={{ delay: idx * 0.1 }}
               className="bg-white/5 backdrop-blur-md border border-white/10 rounded-[24px] sm:rounded-[40px] p-6 sm:p-10 flex flex-col items-start relative group hover:border-secondary/30 transition-all duration-500 shadow-2xl"
             >
-              {unit.name === "Ápice Especialidades" && (
-                <div className="mb-8 relative group/logo flex justify-center w-full">
-                  <div className="absolute -inset-10 bg-secondary/20 rounded-full blur-3xl opacity-0 group-hover/logo:opacity-100 transition-opacity duration-700" />
-                  <img 
-                    src="/logo_apice.png" 
-                    alt="Logo Ápice" 
-                    className="h-24 sm:h-32 md:h-48 w-auto object-contain transition-all duration-700 transform group-hover:scale-110 relative z-10"
-                    style={{ 
-                      filter: 'invert(1) brightness(1.5) contrast(1.5) drop-shadow(0 0 30px #FFC107)',
-                      mixBlendMode: 'screen'
-                    }}
-                  />
-                </div>
-              )}
               <div className="bg-[#4DB0A5] px-6 py-2 rounded-lg mb-10">
                 <h3 className="text-xl md:text-2xl font-display font-bold text-white">{unit.name}</h3>
               </div>
