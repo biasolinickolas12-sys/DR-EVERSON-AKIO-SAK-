@@ -262,9 +262,25 @@ const Hero = () => {
             </a>
           </div>
 
-          <p className="text-xl md:text-2xl text-white/70 max-w-xl leading-relaxed font-light">
-            Especialista em Neurocirurgia, Coluna Vertebral e Neuro-oncologia. Unindo tecnologia robótica ao atendimento profundamente humano para restaurar sua qualidade de vida.
-          </p>
+          <div className="relative max-w-2xl group cursor-default">
+            {/* Subtle accent line */}
+            <div className="absolute -left-8 top-0 bottom-0 w-[2px] bg-gradient-to-b from-secondary/60 via-secondary/20 to-transparent hidden md:block" />
+            
+            <motion.div
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+            >
+              <h2 className="text-2xl md:text-4xl font-display font-bold text-white mb-6 tracking-tight leading-tight uppercase">
+                Especialista em <span className="text-secondary drop-shadow-[0_0_8px_rgba(255,193,7,0.3)]">Neurocirurgia</span>, <br className="hidden md:block" />
+                <span className="text-secondary drop-shadow-[0_0_8px_rgba(255,193,7,0.3)]">Coluna Vertebral</span> e <span className="text-secondary drop-shadow-[0_0_8px_rgba(255,193,7,0.3)]">Neuro-oncologia</span>.
+              </h2>
+              
+              <p className="text-lg md:text-xl text-white/60 leading-relaxed font-light max-w-xl">
+                Unindo tecnologia robótica ao atendimento profundamente humano para restaurar sua qualidade de vida.
+              </p>
+            </motion.div>
+          </div>
         </motion.div>
 
       </div>
@@ -433,6 +449,17 @@ const Philosophy = () => {
 
 const Expertise = () => {
   const [selectedExpertise, setSelectedExpertise] = useState<any>(null);
+  
+  useEffect(() => {
+    if (selectedExpertise) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [selectedExpertise]);
 
   const expertises = [
     {
