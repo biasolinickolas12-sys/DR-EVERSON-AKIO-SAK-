@@ -1004,6 +1004,20 @@ const Locations = () => {
               transition={{ delay: idx * 0.1 }}
               className="bg-white/5 backdrop-blur-md border border-white/10 rounded-[24px] sm:rounded-[40px] p-6 sm:p-10 flex flex-col items-start relative group hover:border-secondary/30 transition-all duration-500 shadow-2xl"
             >
+              {unit.name === "Ápice Especialidades" && (
+                <div className="mb-8 relative group/logo">
+                  <div className="absolute -inset-4 bg-secondary/10 rounded-full blur-xl opacity-0 group-hover/logo:opacity-100 transition-opacity duration-700" />
+                  <img 
+                    src="/Captura de tela 2026-03-19 062903.png" 
+                    alt="Logo Ápice" 
+                    className="h-16 md:h-20 w-auto object-contain transition-all duration-500 transform group-hover:scale-110"
+                    style={{ 
+                      filter: 'brightness(0) invert(1) drop-shadow(0 0 15px rgba(255, 193, 7, 0.9))',
+                      mixBlendMode: 'screen' 
+                    }}
+                  />
+                </div>
+              )}
               <div className="bg-[#4DB0A5] px-6 py-2 rounded-lg mb-10">
                 <h3 className="text-xl md:text-2xl font-display font-bold text-white">{unit.name}</h3>
               </div>
