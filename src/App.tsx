@@ -1010,9 +1010,9 @@ const Locations = () => {
                   <img 
                     src="/Captura de tela 2026-03-19 062903.png" 
                     alt="Logo Ápice" 
-                    className="h-16 md:h-20 w-auto object-contain transition-all duration-500 transform group-hover:scale-110"
+                    className="h-20 sm:h-24 md:h-32 w-auto object-contain transition-all duration-500 transform group-hover:scale-110"
                     style={{ 
-                      filter: 'brightness(0) invert(1) drop-shadow(0 0 15px rgba(255, 193, 7, 0.9))',
+                      filter: 'invert(1) brightness(1.2) contrast(1.2) drop-shadow(0 0 20px rgba(255, 193, 7, 1))',
                       mixBlendMode: 'screen' 
                     }}
                   />
