@@ -1010,7 +1010,7 @@ const Locations = () => {
               transition={{ delay: idx * 0.1 }}
               className="bg-white/5 backdrop-blur-md border border-white/10 rounded-[24px] sm:rounded-[40px] p-6 sm:p-10 flex flex-col items-start relative group hover:border-secondary/30 transition-all duration-500 shadow-2xl"
             >
-              <div className="bg-[#4DB0A5] px-6 py-4 rounded-2xl mb-10 w-full flex flex-col items-center gap-4 shadow-[0_0_20px_rgba(77,176,165,0.2)]">
+              <div className="bg-[#B9F6F0] px-6 py-4 rounded-2xl mb-10 w-full flex flex-col items-center gap-4 shadow-[0_0_20px_rgba(185,246,240,0.3)] border border-[#4DB0A5]/20">
                 {unit.logo && (
                   <div className="h-32 w-full flex items-center justify-center bg-sky-50 rounded-2xl p-4 shadow-inner border border-white/20 group-hover:border-cyan-400 group-hover:shadow-[0_0_35px_rgba(34,211,238,0.5)] transition-all duration-500 relative overflow-hidden">
                     {/* Internal cyan glow on hover */}
@@ -1018,15 +1018,15 @@ const Locations = () => {
                     <img 
                       src={unit.logo} 
                       alt={`Logo ${unit.name}`} 
-                      className="h-full w-auto object-contain transition-transform duration-500"
+                      className="h-full w-auto object-contain transition-transform duration-500 hover:scale-110"
                       style={{ 
                         transform: unit.scale ? `scale(${unit.scale})` : 'none',
-                        filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))'
+                        filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))'
                       }}
                     />
                   </div>
                 )}
-                <h3 className="text-xl md:text-2xl font-display font-bold text-white text-center leading-tight">{unit.name}</h3>
+                <h3 className="text-xl md:text-2xl font-display font-bold text-primary text-center leading-tight drop-shadow-sm">{unit.name}</h3>
               </div>
 
               <div className="space-y-6 sm:space-y-8 w-full">
@@ -1087,9 +1087,9 @@ const Locations = () => {
                   href={unit.contactLink}
                   target={unit.contactLink.startsWith('http') ? "_blank" : undefined}
                   rel={unit.contactLink.startsWith('http') ? "noopener noreferrer" : undefined}
-                  className="group/btn relative flex items-center justify-center gap-4 w-full py-5 bg-secondary text-primary rounded-2xl font-bold uppercase tracking-widest overflow-hidden transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_20px_rgba(255,215,0,0.3)] hover:shadow-[0_0_40px_rgba(255,215,0,0.6)] border border-white/20"
+                  className="group/btn relative flex items-center justify-center gap-4 w-full py-5 bg-[#4DB0A5] text-white rounded-2xl font-bold uppercase tracking-widest overflow-hidden transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-[0_0_25px_rgba(77,176,165,0.4)] hover:shadow-[0_0_45px_rgba(77,176,165,0.7)] border border-white/30"
                 >
-                  <span className="relative z-10 flex items-center gap-3 text-xs">
+                  <span className="relative z-10 flex items-center gap-3 text-xs drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
                     {unit.contactIcon}
                     {unit.contactLabel}
                   </span>
