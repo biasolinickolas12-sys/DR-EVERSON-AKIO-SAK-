@@ -1012,9 +1012,9 @@ const Locations = () => {
             >
               <div className="bg-[#4DB0A5] px-6 py-4 rounded-2xl mb-10 w-full flex flex-col items-center gap-4 shadow-[0_0_20px_rgba(77,176,165,0.2)]">
                 {unit.logo && (
-                  <div className="h-32 w-full flex items-center justify-center bg-white rounded-2xl p-4 shadow-lg border border-white/20 group-hover:border-secondary group-hover:shadow-[0_0_30px_rgba(255,215,0,0.4)] transition-all duration-500 relative overflow-hidden">
+                  <div className="h-32 w-full flex items-center justify-center bg-white rounded-2xl p-4 shadow-lg border border-white/20 group-hover:border-cyan-400 group-hover:shadow-[0_0_30px_rgba(34,211,238,0.4)] transition-all duration-500 relative overflow-hidden">
                     {/* Subtle internal glow on hover */}
-                    <div className="absolute inset-0 bg-secondary/0 group-hover:bg-secondary/[0.03] transition-colors duration-500" />
+                    <div className="absolute inset-0 bg-cyan-400/0 group-hover:bg-cyan-400/[0.03] transition-colors duration-500" />
                     <img 
                       src={unit.logo} 
                       alt={`Logo ${unit.name}`} 
