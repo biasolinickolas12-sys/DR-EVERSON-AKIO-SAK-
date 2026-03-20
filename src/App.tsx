@@ -1012,16 +1012,16 @@ const Locations = () => {
             >
               <div className="bg-[#4DB0A5] px-6 py-4 rounded-2xl mb-10 w-full flex flex-col items-center gap-4 shadow-[0_0_20px_rgba(77,176,165,0.2)]">
                 {unit.logo && (
-                  <div className="h-32 w-full flex items-center justify-center bg-white rounded-2xl p-4 shadow-lg border border-white/20 group-hover:border-cyan-400 group-hover:shadow-[0_0_30px_rgba(34,211,238,0.4)] transition-all duration-500 relative overflow-hidden">
-                    {/* Subtle internal glow on hover */}
-                    <div className="absolute inset-0 bg-cyan-400/0 group-hover:bg-cyan-400/[0.03] transition-colors duration-500" />
+                  <div className="h-32 w-full flex items-center justify-center bg-[#010B1D]/90 backdrop-blur-xl rounded-2xl p-4 shadow-lg border border-white/5 group-hover:border-cyan-400/50 group-hover:shadow-[0_0_40px_rgba(34,211,238,0.4)] transition-all duration-500 relative overflow-hidden">
+                    {/* Internal cyan glow on hover */}
+                    <div className="absolute inset-0 bg-cyan-400/0 group-hover:bg-cyan-400/[0.05] transition-colors duration-500" />
                     <img 
                       src={unit.logo} 
                       alt={`Logo ${unit.name}`} 
                       className="h-full w-auto object-contain transition-transform duration-500"
                       style={{ 
                         transform: unit.scale ? `scale(${unit.scale})` : 'none',
-                        filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.1))'
+                        filter: 'drop-shadow(0 0 12px rgba(255,255,255,0.3)) brightness(1.1)'
                       }}
                     />
                   </div>
