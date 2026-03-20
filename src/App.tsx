@@ -967,7 +967,7 @@ const Locations = () => {
       contactIcon: <MessageCircle className="w-5 h-5" />
     },
     {
-      name: "Polimed – Registro",
+      name: "Polimed",
       logo: "/logo polimed.png",
       scale: 1.5,
       address: "Av. Nelson Brihi Badur, 455 Vila Nova Ribeira, Registro – SP",
