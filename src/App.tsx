@@ -958,6 +958,7 @@ const Locations = () => {
     {
       name: "Ápice Especialidades",
       logo: "/logo apice.png",
+      scale: 1.2,
       address: "Rua Coronel José Pedro de Oliveira, 411 Jardim Faculdade, Sorocaba – SP",
       phones: ["(15) 3229-0213", "(15) 3229-0202"],
       whatsapp: "(15) 3229-0203",
@@ -968,7 +969,7 @@ const Locations = () => {
     {
       name: "Polimed – Registro",
       logo: "/logo polimed.png",
-      scale: 1.25,
+      scale: 1.5,
       address: "Av. Nelson Brihi Badur, 455 Vila Nova Ribeira, Registro – SP",
       phones: ["(13) 3822-6175"],
       whatsapp: "(13) 99715-2039",
@@ -979,6 +980,7 @@ const Locations = () => {
     {
       name: "Clínica Reunidas",
       logo: "/logo clinica reunidas.png",
+      scale: 1.2,
       address: "Rua Antônio Soares, 71 Jardim Paulistano, Sorocaba – SP",
       appointments: "(15) 3202-7535",
       contactLink: "tel:1532027535",
@@ -1010,11 +1012,11 @@ const Locations = () => {
             >
               <div className="bg-[#4DB0A5] px-6 py-4 rounded-2xl mb-10 w-full flex flex-col items-center gap-4 shadow-[0_0_20px_rgba(77,176,165,0.2)]">
                 {unit.logo && (
-                  <div className="h-16 w-full flex items-center justify-center bg-white/10 rounded-xl p-2 backdrop-blur-sm border border-white/10 group-hover:bg-white/20 transition-all duration-500">
+                  <div className="h-24 w-full flex items-center justify-center bg-white/10 rounded-xl p-2 backdrop-blur-sm border border-white/10 group-hover:bg-white/20 transition-all duration-500">
                     <img 
                       src={unit.logo} 
                       alt={`Logo ${unit.name}`} 
-                      className="h-full w-auto object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
+                      className="h-full w-auto object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] transition-transform duration-500"
                       style={{ transform: unit.scale ? `scale(${unit.scale})` : 'none' }}
                     />
                   </div>
