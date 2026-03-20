@@ -968,6 +968,7 @@ const Locations = () => {
     {
       name: "Polimed – Registro",
       logo: "/logo polimed.png",
+      scale: 1.25,
       address: "Av. Nelson Brihi Badur, 455 Vila Nova Ribeira, Registro – SP",
       phones: ["(13) 3822-6175"],
       whatsapp: "(13) 99715-2039",
@@ -1014,6 +1015,7 @@ const Locations = () => {
                       src={unit.logo} 
                       alt={`Logo ${unit.name}`} 
                       className="h-full w-auto object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
+                      style={{ transform: unit.scale ? `scale(${unit.scale})` : 'none' }}
                     />
                   </div>
                 )}
