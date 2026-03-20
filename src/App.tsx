@@ -1010,9 +1010,9 @@ const Locations = () => {
               transition={{ delay: idx * 0.1 }}
               className="bg-white/5 backdrop-blur-md border border-white/10 rounded-[24px] sm:rounded-[40px] p-6 sm:p-10 flex flex-col items-start relative group hover:border-secondary/30 transition-all duration-500 shadow-2xl"
             >
-              <div className="bg-[#B9F6F0] px-6 py-4 rounded-2xl mb-10 w-full flex flex-col items-center gap-4 shadow-[0_0_20px_rgba(185,246,240,0.3)] border border-[#4DB0A5]/20">
+              <div className="bg-[#0A1526] px-6 py-4 rounded-2xl mb-10 w-full flex flex-col items-center gap-4 shadow-[0_0_25px_rgba(255,193,7,0.15)] border border-secondary/30">
                 {unit.logo && (
-                  <div className="h-32 w-full flex items-center justify-center bg-sky-50 rounded-2xl p-4 shadow-inner border border-white/20 group-hover:border-cyan-400 group-hover:shadow-[0_0_35px_rgba(34,211,238,0.5)] transition-all duration-500 relative overflow-hidden">
+                  <div className="h-32 w-full flex items-center justify-center bg-white rounded-2xl p-4 shadow-inner border border-white/20 group-hover:border-secondary transition-all duration-500 relative overflow-hidden">
                     {/* Internal cyan glow on hover */}
                     <div className="absolute inset-0 bg-cyan-400/0 group-hover:bg-cyan-400/[0.05] transition-colors duration-500" />
                     <img 
@@ -1026,7 +1026,11 @@ const Locations = () => {
                     />
                   </div>
                 )}
-                <h3 className="text-xl md:text-2xl font-display font-bold text-primary text-center leading-tight drop-shadow-sm">{unit.name}</h3>
+                <h3 className="text-xl md:text-2xl font-display font-bold text-white text-center leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+                  {unit.name.split(' – ').map((part, i) => (
+                    <span key={i} className={i === 0 ? "text-secondary block mb-1" : "text-white/90 text-sm block"}>{part}</span>
+                  ))}
+                </h3>
               </div>
 
               <div className="space-y-6 sm:space-y-8 w-full">
