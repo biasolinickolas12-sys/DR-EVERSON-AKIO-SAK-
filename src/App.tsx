@@ -313,7 +313,7 @@ const Hero = () => {
 const Stats = () => {
   const stats = [
     { label: "Neurocirurgia Especializada", value: "RQE 87969", icon: <Brain className="w-5 h-5" /> },
-    { label: "Especialização de Elite", value: "Residência USP/SP", icon: <Stethoscope className="w-5 h-5" /> },
+    { label: "Especialização de Elite", value: "Conjunto Hospitalar de Sorocaba", icon: <Stethoscope className="w-5 h-5" /> },
     { label: "Precisão em cada gesto", value: "Tecnologia Robótica", icon: <Activity className="w-5 h-5" /> },
     { label: "Propósito de vida", value: "Atendimento Humano", icon: <CheckCircle2 className="w-5 h-5" /> },
   ];
