@@ -867,7 +867,7 @@ const FAQ = () => {
     },
     {
       q: "Onde o Dr. Everson Akio realiza os atendimentos?",
-      a: "O Dr. Everson atende em unidades de excelência: Ápice Especialidades (Sorocaba, SP), Polimed (Registro, SP) e Clínica Reunidas (Sorocaba, SP). Todas as unidades contam com infraestrutura completa para oferecer o melhor cuidado neurológico."
+      a: "O Dr. Everson atende em unidades de excelência: Ápice Especialidades (Sorocaba, SP) e Polimed (Registro, SP). Ambas as unidades contam com infraestrutura completa para oferecer o melhor cuidado neurológico."
     },
     {
       q: "Quando a dor na coluna exige cirurgia?",
@@ -976,16 +976,6 @@ const Locations = () => {
       contactLink: "https://wa.me/5513997152039?text=Quero%20marcar%20uma%20consulta%20com%20o%20Dr%20Everson%20Akio%20!!",
       contactLabel: "Falar no WhatsApp",
       contactIcon: <MessageCircle className="w-5 h-5" />
-    },
-    {
-      name: "Clínica Reunidas",
-      logo: "/logo clinica reunidas.png",
-      scale: 1.2,
-      address: "Rua Antônio Soares, 71 Jardim Paulistano, Sorocaba – SP",
-      appointments: "(15) 3202-7535",
-      contactLink: "tel:1532027535",
-      contactLabel: "Ligar Agora",
-      contactIcon: <Phone className="w-5 h-5" />
     }
   ];
 
@@ -1071,19 +1061,6 @@ const Locations = () => {
                   </div>
                 )}
 
-                {unit.appointments && (
-                  <div className="flex gap-6 items-start">
-                    <div className="w-12 h-12 rounded-xl border border-white/20 flex items-center justify-center shrink-0">
-                      <Phone className="text-white w-6 h-6" />
-                    </div>
-                    <div>
-                      <p className="text-white/80 text-lg font-light leading-relaxed">
-                        <span className="font-bold">Agendamentos:</span><br />
-                        {unit.appointments}
-                      </p>
-                    </div>
-                  </div>
-                )}
               </div>
 
               <div className="mt-12 w-full">
